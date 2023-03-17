@@ -1,0 +1,135 @@
+/* imprime un array tipo string */
+void printArrayStr(string arr [5])
+{
+	string out = "[";
+	for(int i = 0; i <= arr.size(); i++)
+	{
+		if(i == arr.size())
+		{
+			out = out + arr[i];
+		}
+		else
+		{
+			out = out + arr[i] + ", ";
+		}
+	}
+	out = out + "]";
+	printf(out);
+}
+/* imprime un array tipo int*/
+void printArrayInt(int arr [5])
+{
+	string out = "[";
+	for(int i = 0; i <= arr.size(); i++)
+	{
+		if(i == arr.size())
+		{
+			out = out + iota(arr[i]);
+		}
+		else
+		{
+			out = out + iota(arr[i]) + ", ";
+		}
+	}
+	out = out + "]";
+	printf(out);
+}
+
+/* imprime los puntos por curso de cada estudiante */
+void imprimir_punteo(string ests[4], string cursos[3], int notas [4][3][5])
+{	
+    string ponderacion [5] = ["1er parcial", "2do parcial", "3er parcial", "Lab", "Examen final"];
+    printArrayStr(ponderacion);
+    printf("");
+    for (int i = 0; i <= ests.size(); i++)
+	{
+        printf("Estudinte: ");
+        printf(ests[i]);
+        for (int j = 0; j <= cursos.size(); j++)
+		{
+            string cad = "Curso: " + cursos[j];
+            printf(cad);
+            printArrayInt(notas[i][j]);
+        }
+        printf("");
+    }
+}
+/* imprime la nota total por curso de cada estudiante*/
+/* parciales 43, lab sobre 32 y examen final 25*/
+void imprimir_nota_final(string ests[4], string cursos[3], int notas[4][3][5])
+{
+    for (int i = 0; i <= ests.size(); i++)
+	{
+        for (int j = 0; j <= cursos.size(); j++)
+		{
+            float nota_final = 0.0;
+            for (int k = 0; k <= notas[i][j].size(); k++)
+			{
+                float nota = 0.0;
+				if (k == notas[i][j].size() - 1 )
+				{
+					float efinal = 25.0 / 100.0;
+					nota = notas[i][j][k] * efinal;
+				} 
+				else if (k == notas[i][j].size() - 2) 
+				{
+					float lab = 32.0 / 100.0;
+					nota = notas[i][j][k] * lab;
+				} 
+				else 
+				{
+					float parcial = (43.0 / 3.0) / 100.0;
+					nota = notas[i][j][k] * parcial;
+				};
+                nota_final = nota_final + nota;
+            }
+
+            string cad = ests[i] + " -> Curso: " + cursos[j];
+            printf(cad);
+            printf(iota(nota_final));
+        }
+        printf("");
+    }
+}
+/* correccion de notas */
+void corregir_notas(int corregir [3][5], int notas [4][3][5])
+{
+    for (int i = 0; i <= notas.size(); i++)
+	{
+        for (int j = 0; j <= notas[i].size(); j++) 
+		{
+            for (int k = 0; k <= notas[i][j].size(); k++)
+			{
+                notas[i][j][k] = corregir[j][k];
+            }
+        }
+    }
+}
+
+void main()
+{	
+    string estudiantes [4] = ["Lorenza", "Rosendo", "Fermina", "Markel"];
+    string cursos [3] = ["Arqui1", "Archivos", "Compi2"];
+
+    int notas_buenas [3][5] = [
+        [53,88,95,89,75],
+        [81,51,57,67,93],
+        [94,74,58,84,100]
+    ];
+
+    int notas [4][3][5] = [
+        [[37,49,61,29,44],[56,60,51,68,70],[47,15,39,17,74]],
+        [[69,74,52,34,36],[24,44,50,18,76],[74,60,32,63,78]],
+        [[78,14,23,52,33],[28,79,77,55,24],[23,79,47,62,44]],
+        [[73,53,11,49,52],[29,16,65,34,12],[72,69,30,44,37]]
+    ];
+
+    printf("\nImprimir notas por curso y estudiantes\n");
+    imprimir_punteo(estudiantes, cursos, notas);
+    printf("\nImprimir nota final por curso y estudiantes\n");
+    imprimir_nota_final(estudiantes, cursos, notas);
+    printf("\nMejorar notas de todos los cursos\n");
+    corregir_notas(notas_buenas, notas);
+    printf("\nImprimir nota final actualizada por curso y estudiantes\n");
+    imprimir_nota_final(estudiantes, cursos, notas);
+}

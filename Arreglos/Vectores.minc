@@ -1,0 +1,135 @@
+/* intercambio */
+void intercambiar(vector<int> a, int i, int j)
+{
+    int aux = a[i];
+    a[i] = a[j];
+    a[j] = aux;
+}
+
+/* algoritmo de intercambio */
+void ordIntercambio(vector<int> arr)
+{
+    int i = 0;
+    int j = 0;
+    
+    while (i < (arr.size() - 1))
+	{
+        j = i + 1;
+        while (j < arr.size()) 
+		{
+            if (arr[i] > arr[j])
+			{
+                intercambiar(arr, i, j);
+            }
+            j = j + 1;
+        }
+        i = i + 1;
+    }
+}
+
+/* algoritmo de seleccion */
+void ordSeleccion(vector<int> arr)
+{
+    int indiceMenor = 0;
+    int i = 0;
+    int j = 0;
+    int n = arr.size();
+
+    while (i < (n - 1))
+	{
+        /* comienzo de exploracion indice i */
+        indiceMenor = i;
+        /* j explora la sublista */
+        j = i + 1;
+        while (j < n)
+		{
+            if (arr[j] < arr[indiceMenor]) 
+			{
+                indiceMenor = j;
+            }
+            j = j + 1;
+        }
+
+        if (i != indiceMenor)
+		{
+            intercambiar(arr, i, indiceMenor);
+        }
+
+        i = i + 1;
+    }
+}
+
+/* algoritmo insercion */
+void ordInsercion(vector<int> arr)
+{
+    int i = 0;
+    int j = 0;
+    int aux = 0;
+
+    i = 1;
+    while (i < arr.size())
+	{
+        j = i;
+        aux = arr[i];
+
+        while (j > 0 && aux < arr[j-1]) 
+		{
+            arr[j] = arr[j - 1];
+            j = j - 1;
+        }
+        
+        arr[j] = aux;
+        i = i + 1;
+    }
+}
+
+void printArray(string msg, vector<int> arr)
+{
+	string out = "[";
+	
+	for(int i = 0; i <= arr.size(); i++)
+	{
+		if(i == arr.size())
+		{
+			out = out + iota(arr[i]);
+		}
+		else
+		{
+			out = out + iota(arr[i]) + ", ";
+		}
+	}
+	out = out + "]";
+	printf(msg, out);
+}
+
+void main () {
+    /*
+        Ordenamiento de intercambio
+        entrada: [8, 4, 6, 2]
+        salida: [2, 4, 6, 8]
+    */
+	vector<int> arr1 = [8, 4, 6, 2];
+	printArray("entrada: ", arr1);
+    ordIntercambio(arr1);
+    printArray("salida: ", arr1);
+
+    /*
+        Ordenamiento de seleccion
+        entrada: [40, 21, 1, 3, 14, 4];
+        salida: [1, 3, 4, 14, 21, 40]
+    */
+    vector<int> arr2 = [40, 21, 1, 3, 14, 4];
+	printArray("entrada: ", arr2);
+    ordSeleccion(arr2);
+    printArray("salida: ", arr2);
+
+    /*
+        Ordenamiento de insercion
+        entrada: [90, 3, 40, 10, 8, 5];
+        salida: [3, 5, 8, 10, 40, 90]
+    */
+    vector<int> arr3 = [90, 3, 40, 10, 8, 5];
+	printArray("entrada: ", arr3);
+    ordInsercion(arr3);
+    printArray("salida: ", arr3);
+}

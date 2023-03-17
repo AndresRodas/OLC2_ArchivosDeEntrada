@@ -1,0 +1,57 @@
+
+int f(int n)
+{
+    if (n < 2)
+	{
+        return 1;
+    }
+	else
+	{
+        return n * f(n - 1);
+    }
+}
+
+int ack(int m, int n)
+{
+    if (m == 0)
+	{
+        return n + 1;
+    }
+	else if (n == 0) 
+	{
+        return ack(m - 1, 1);
+    }
+	else
+	{
+        return ack(m - 1, ack(m, n - 1));
+    }
+}
+
+void main()
+{
+    printf("--------------------------");
+    printf("----ARCHIVO RECURSIVOS----");
+    printf("--------------------------");
+    
+    printf("Factorial de 6: ",iota(f(6)));
+    printf("Factorial de 4: ",iota(f(4)));
+    printf("Factorial de 3: ",iota(f(3)));
+
+    printf("");
+    printf("Ackerman de 3,0: ",iota(ack(3,0)));
+    printf("Ackerman de 2,8: ",iota(ack(2,8)));
+    printf("Ackerman de 2,1: ",iota(ack(2,1)));
+}
+
+/*
+--------------------------
+----ARCHIVO RECURSIVOS----
+--------------------------
+Factorial de 6 720
+Factorial de 4 24
+Factorial de 3 6
+
+Ackerman de 3,0 5
+Ackerman de 2,8 19
+Ackerman de 2,1 5
+*/

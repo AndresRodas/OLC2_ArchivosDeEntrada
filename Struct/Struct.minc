@@ -1,0 +1,67 @@
+struct StructArr {
+    float datos;
+}
+
+struct CentroTuristico {
+    string nombre;
+}
+
+struct Carro {
+    string placa;
+    string color;
+    string tipo;
+}
+
+struct Personaje {
+    string nombre;
+    int edad;
+    string descripcion;
+    Carro carro_;
+    StructArr numeros;
+}
+
+CentroTuristico nuevo_centro(string nombre)
+{
+	struct CentroTuristico centro_turistico = { nombre };
+	return centro_turistico;
+}
+
+void main()
+{
+    printf("*******************STRUCTS");
+
+    struct CentroTuristico centro1 = nuevo_centro("Volcan de pacaya");
+	struct CentroTuristico centro2 = nuevo_centro("Rio dulce");
+	struct CentroTuristico centro3 = nuevo_centro("Laguna Luchoa");
+	struct CentroTuristico centro4 = nuevo_centro("Playa Blanca");
+	struct CentroTuristico centro5 = nuevo_centro("Antigua Guatemala");
+	struct CentroTuristico centro6 = nuevo_centro("Lago de Atitlan");
+
+	printf("El nombre del Centro turistico 1 es: ",centro1.nombre);
+	printf("El nombre del Centro turistico 2 es: ",centro2.nombre);
+	printf("El nombre del Centro turistico 3 es: ",centro3.nombre);
+	printf("El nombre del Centro turistico 4 es: ",centro4.nombre);
+	printf("El nombre del Centro turistico 5 es: ",centro5.nombre);
+	printf("El nombre del Centro turistico 6 es: ",centro6.nombre);
+
+    printf("*******************CREANDO STRUCTS COMPUESTO");
+
+	struct Carro new_carro = { "090PLO", "gris", "mecanico" };
+	struct StructArr nums;
+
+    struct Personaje p1 =  {
+        .nombre = "Jose",
+        .edad = atoi("18"),
+        .descripcion = "No hace nada",
+        .carro_ = new_carro,
+        .numeros = nums
+    };
+
+    printf("Persona nombre:", p1.nombre, ", edad: ", iota(p1.edad), ", carroTipo: ",p1.carro_.tipo, ", numeros:", iota(p1.numeros.datos));
+
+	struct StructArr nums2 = {atof("23.43")};
+	p1.numeros = nums2;
+	
+    printf("Persona nombre:", p1.nombre, ", edad: ", iota(p1.edad), ", carroTipo: ",p1.carro_.tipo, ", nuevos numeros:", iota(p1.numeros.datos));
+
+}

@@ -1,0 +1,125 @@
+void main() {
+
+    printf("----------------------");
+    printf("----ARCHIVO BASICO----");
+    printf("----------------------");
+	
+    bool bol = false;
+    bool bol2 = !bol;
+    string cad1 = "imprimir";
+    string cad2 = "cadena valida";
+
+
+    int val1 = 7 - (5 + 10 * (2 + 4 * (5 + 2 * 3)) - 8 * 3 * 3) + 50 * (6 * 2);
+    int val2 = (2 * 2 * 2 * 2) - 9 - (8 - 6 + (3 * 3 - 6 * 5 - 7 - (9 + 7 * 7 * 7) + 10) - 5) + 8 - (6 - 5 * (2 * 3));
+    int val3 = val1 + ((2 + val2 * 3) + 1 - ((2 * 2 * 2) - 2) * 2) - 2;
+
+    printf("El valor de val1 es: ",iota(val1));
+    printf("El valor de val2 es: ",iota(val2));
+    printf("El valor de val3 es: ",iota(val3));
+    printf("El resultado de la operación es: ",iota(val3));
+    printf("El valor de bo1 es: ",iota(bol));
+    printf("El valor de cad1 es: ",cad1);
+    printf("El valor de cad2 es: ",cad2);
+    printf("El valor de bol2: ",iota(bol2));
+    printf("");
+	
+    int a = 100;
+    int b = 100;
+    int c = 7;
+    bool f = true;
+    float j = 10.0;
+    float k = 10.0;
+
+    printf("");
+    printf("");
+
+    if (a > b || b < c)
+    {
+        printf(">>>>>> Esto no debería de imprimirse");
+    }
+    else
+    {
+        printf(">>>>>> Esto debería de imprimirse");
+    }
+
+
+    if ((a == b && j == k) || 14 != c)
+    {
+        printf(">>>>>> Esto debería de imprimirse");
+    }
+    else
+    {
+        printf(">>>>>> Esto no debería de imprimirse");
+    }
+
+    int val = 5;
+    int resp = 5;
+    int valorVerdadero = 100;
+
+    if((valorVerdadero == (50 + 50 + (val - val))) && ! ! ! ! ! ! ! ! ! ! true)
+    {
+        printf(">>>>>> En este lugar deberia de entrar :)");
+        valorVerdadero = 50;
+    }
+    else if ((f || (valorVerdadero > 50)) && ((resp != 100) && ! ! ! ! ! f))
+    {
+        printf(">>>>>> Aca no deberia de entrar :ccc");
+        valorVerdadero = 70;
+    }
+    else
+    {
+        printf(">>>>>> Aca no deberia de entrar :cccc");
+    }
+
+    int x1 = 15;
+
+    if (x1 % 2 == 0)
+    {
+        printf(">>>>> numeroPar ingreso a if verdadero, ", iota(x1), " es par");
+    }
+    else
+    {
+        printf(">>>>> numeroPar ingreso a if falso, ", iota(x1), " no es par");
+    }
+
+    int abs1 = 7-11;
+    float abs2 = 10.0;
+    int raiz1 = 9;
+    float raiz2 = 100.0;
+
+    printf("");
+    printf("*************PRUEBA DE EMBEBIDAS");
+    printf("valor de b: ",iota(b));
+
+    printf(iota(10) + iota(3.5));
+    printf(iota(true));
+    string cadena = iota(true) + " -> " + iota(3.504);
+    printf(cadena);
+
+}
+
+/*
+----------------------
+----ARCHIVO BASICO----
+----------------------
+El valor de val1 es: 214
+El valor de val2 es: 412
+El valor de val3 es: 1439
+El resultado de la operación es: 1439
+El valor de bo1 es: false
+El valor de cad1 es: imprimir
+El valor de cad2 es: cadena valida
+El valor de bol2: true
+
+>>>>>> Esto debería de imprimirse
+>>>>>> Esto debería de imprimirse
+>>>>>> En este lugar deberia de entrar :)
+>>>>> numeroPar ingreso a if falso, 15 no es par
+
+*************PRUEBA DE EMBEBIDAS
+valor de b: 100
+103.5
+true
+true->3.504
+*/

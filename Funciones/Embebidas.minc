@@ -1,0 +1,44 @@
+
+void main()
+{
+    printf("--------------------------");
+    printf("---FUNCIONES EMBEBIDAS----");
+	printf("--------------------------");
+	
+	printf("");
+	printf("valor 1: ", iota(atoi("2")+atoi("2")));
+	printf("valor 2: ", iota(atof("9.5")-atof("3.6")));
+	printf("valor true: ", iota(true));
+	printf("valor false: ", iota(false));
+	printf("valor nulo: ", NULL);
+	
+	vector<int> vec1 = [10,8,16,94,1,2,16,8,16,23];
+	
+	printf("");
+	float media1 = mean(vec1);
+	printf("valor media: ", iota(media1));
+
+	int mediana1 = median(vec1);
+	printf("valor mediana: ", iota(mediana1));
+	
+	int moda1 = mode(vec1);
+	printf("valor moda: ", iota(moda1));
+	
+}
+
+
+/*
+--------------------------
+---FUNCIONES EMBEBIDAS----
+--------------------------
+
+valor 1: 4
+valor 2: 5.9
+valor true: true
+valor false: false
+valor nulo: NULL
+
+valor media: 19.4
+valor mediana: 13
+valor moda: 16
+*/
