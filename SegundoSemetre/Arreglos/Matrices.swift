@@ -1,7 +1,7 @@
 func printArrayStr(_ arr: [String]) {
     var out = "["
-    for i in 0...arr.count-1 {
-        if i == (arr.count - 1) {
+    for i in 0...4 {
+        if i == (4) {
             out += arr[i]
         } else {
             out += arr[i] + ", "
@@ -13,8 +13,8 @@ func printArrayStr(_ arr: [String]) {
 
 func printArrayInt(_ arr: [Int]) {
     var out = "["
-    for i in 0...arr.count-1 {
-        if i == arr.count - 1 {
+    for i in 0...4 {
+        if i == 4 {
             out += String(arr[i])
         } else {
             out += String(arr[i]) + ", "
@@ -28,9 +28,9 @@ func imprimirPunteo(_ ests: [String], _ cursos: [String], _ notas: [[[Int]]]) {
     let ponderacion = ["1er parcial", "2do parcial", "3er parcial", "Lab", "Examen final"]
     printArrayStr(ponderacion)
     print("")
-    for i in 0...ests.count-1 {
-        print("Estudiante: ", (ests[i]))
-        for j in 0...cursos.count-1 {
+    for i in 0...3 {
+        print("Estudiante: ", ests[i])
+        for j in 0...2 {
             let cad = "Curso: "
             print(cad, cursos[j])
             printArrayInt(notas[i][j])
@@ -40,15 +40,15 @@ func imprimirPunteo(_ ests: [String], _ cursos: [String], _ notas: [[[Int]]]) {
 }
 
 func imprimirNotaFinal(_ ests: [String], _ cursos: [String], _ notas: [[[Int]]]) {
-    for i in 0...ests.count-1 {
-        for j in 0...cursos.count-1 {
+    for i in 0...3 {
+        for j in 0...2 {
             var notaFinal: Float = 0.0
-            for k in 0...notas[i][j].count-1 {
+            for k in 0...4 {
                 var nota: Float = 0.0
-                if k == notas[i][j].count - 1 {
+                if k == 4 {
                     let efinal: Float = 25.0 / 100.0
                     nota = Float(notas[i][j][k]) * efinal
-                } else if k == notas[i][j].count - 2 {
+                } else if k == 3 {
                     let lab: Float = 32.0 / 100.0
                     nota = Float(notas[i][j][k]) * lab
                 } else {
@@ -62,16 +62,6 @@ func imprimirNotaFinal(_ ests: [String], _ cursos: [String], _ notas: [[[Int]]])
             print(String(notaFinal))
         }
         print("")
-    }
-}
-
-func corregirNotas(_ corregir: [[Int]], _ notas: inout [[[Int]]]) {
-    for i in 0...notas.count-1 {
-        for j in 0...notas[i].count-1 {
-            for k in 0...notas[i][j].count-1 {
-                notas[i][j][k] = corregir[j][k]
-            }
-        }
     }
 }
 
@@ -94,13 +84,6 @@ var notas: [[[Int]]] = [
 print("\nImprimir notas por curso y estudiantes\n")
 imprimirPunteo(estudiantes, cursos, notas)
 print("\nImprimir nota final por curso y estudiantes\n")
-imprimirNotaFinal(estudiantes, cursos, notas)
-print("\nMejorar notas de todos los cursos\n")
-
-let notasBuenasArray = Array(notasBuenas)
-corregirNotas(notasBuenasArray, &notas)
-
-print("\nImprimir nota final actualizada por curso y estudiantes\n")
 imprimirNotaFinal(estudiantes, cursos, notas)
 
 /*
@@ -170,38 +153,4 @@ Markel  -> Curso:  Archivos
 29.646667
 Markel  -> Curso:  Compi2
 47.839996
-
-
-Mejorar notas de todos los cursos
-
-
-Imprimir nota final actualizada por curso y estudiantes
-
-Lorenza  -> Curso:  Arqui1
-81.05667
-Lorenza  -> Curso:  Archivos
-71.78
-Lorenza  -> Curso:  Compi2
-84.27333
-
-Rosendo  -> Curso:  Arqui1
-81.05667
-Rosendo  -> Curso:  Archivos
-71.78
-Rosendo  -> Curso:  Compi2
-84.27333
-
-Fermina  -> Curso:  Arqui1
-81.05667
-Fermina  -> Curso:  Archivos
-71.78
-Fermina  -> Curso:  Compi2
-84.27333
-
-Markel  -> Curso:  Arqui1
-81.05667
-Markel  -> Curso:  Archivos
-71.78
-Markel  -> Curso:  Compi2
-84.27333
 */

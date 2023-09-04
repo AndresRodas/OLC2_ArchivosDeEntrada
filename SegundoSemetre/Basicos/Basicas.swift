@@ -64,20 +64,6 @@ if x1 % 2 == 0 {
     print(">>>>> numeroPar ingreso a if falso,", x1, "no es par")
 }
 
-var abs1 = 7 - 11
-var abs2: Float = 10.0
-var raiz1 = 9
-var raiz2: Float = 100.0
-
-print("")
-print("*************PRUEBA DE EMBEBIDAS")
-print("valor de b:", b)
-
-print(String(10) + String(3.5))
-print(String(true))
-var cadena = String(true) + " -> " + String(3.504)
-print(cadena)
-
 /*
 ----------------------
 ----ARCHIVO BASICO----
@@ -96,10 +82,4 @@ El valor de bol2: true
 >> Esto debería de imprimirse
 >> En este lugar debería de entrar :)
 >>> numeroPar ingreso a if falso, 15 no es par
-
-*************PRUEBA DE EMBEBIDAS
-valor de b: 100
-103.5
-true
-true -> 3.504
 */

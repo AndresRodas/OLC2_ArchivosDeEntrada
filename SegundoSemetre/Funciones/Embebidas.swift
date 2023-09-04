@@ -3,8 +3,8 @@ print("---FUNCIONES EMBEBIDAS----");
 print("--------------------------");
 
 print("");
-let num1 = Int("2")
-let num2 = Int("2")
+let num1 = Int("20")
+let num2 = Int("20")
 let suma = String(num1 + num2)
 let num3 = Float("9.5")
 let num4 = Float("3.6")
@@ -24,7 +24,7 @@ print("valor cadena: ", cadena);
 ---FUNCIONES EMBEBIDAS----
 --------------------------
 
-valor 1:  4
+valor 1:  40
 valor 2:  5.9
 valor true:  true
 valor false:  false

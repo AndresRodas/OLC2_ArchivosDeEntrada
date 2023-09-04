@@ -46,26 +46,6 @@ func ordSeleccion(_ arr: inout [Int]) {
     }
 }
 
-// Algoritmo de ordenamiento por inserción (Insertion Sort)
-func ordInsercion(_ arr: inout [Int]) {
-    var i = 1
-    var j = 0
-    var aux = 0
-    
-    while i < arr.count {
-        j = i
-        aux = arr[i]
-        
-        while j > 0 && aux < arr[j - 1] {
-            arr[j] = arr[j - 1]
-            j -= 1
-        }
-        
-        arr[j] = aux
-        i += 1
-    }
-}
-
 // Función para imprimir un arreglo
 func printArray(_ msg: String, _ arr: [Int]) {
     var out = "["
@@ -83,20 +63,18 @@ func printArray(_ msg: String, _ arr: [Int]) {
 print("=============================================")
 print("===============ORDENAMIENTO==================")
 print("=============================================")
+print("INTERCAMBIO:")
 var arr1: [Int] = [8, 4, 6, 2]
 printArray("entrada: ", arr1)
 ordIntercambio(&arr1)
 printArray("salida: ", arr1)
-
+print("SELECCIÓN:")
 var arr2: [Int] = [40, 21, 1, 3, 14, 4]
 printArray("entrada: ", arr2)
 ordSeleccion(&arr2)
 printArray("salida: ", arr2)
 
 var arr3: [Int] = [90, 3, 40, 10, 8, 5]
-printArray("entrada: ", arr3)
-ordInsercion(&arr3)
-printArray("salida: ", arr3)
 
 print("=============================================")
 print("================FUNCIONES====================")
@@ -121,12 +99,12 @@ print("arr1 cantidad: ", arr1.count)
 =============================================
 ===============ORDENAMIENTO==================
 =============================================
+INTERCAMBIO:
 entrada: [8, 4, 6, 2]
 salida: [2, 4, 6, 8]
+SELECCIÓN:
 entrada: [40, 21, 1, 3, 14, 4]
 salida: [1, 3, 4, 14, 21, 40]
-entrada: [90, 3, 40, 10, 8, 5]
-salida: [3, 5, 8, 10, 40, 90]
 =============================================
 ================FUNCIONES====================
 =============================================
@@ -134,8 +112,8 @@ arr1: [2, 4, 6, 8]
 arr1: [2, 4, 6, 8, 9]
 arr2: [1, 3, 4, 14, 21, 40]
 arr2: [1, 3, 4, 14, 21]
-arr2: [3, 5, 8, 10, 40, 90]
-arr2: [3, 5, 8, 40, 90]
+arr2: [90, 3, 40, 10, 8, 5]
+arr2: [90, 3, 40, 8, 5]
 arr1 vacío:  false
 arr1 cantidad:  5
 */
