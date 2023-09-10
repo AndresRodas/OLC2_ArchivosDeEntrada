@@ -48,7 +48,7 @@ func ordSeleccion(_ arr: inout [Int]) {
 
 // Función para imprimir un arreglo
 func printArray(_ msg: String, _ arr: [Int]) {
-    var out = "["
+    var out = ".["
     for i in 0...arr.count-1 {
         if i == arr.count - 1 {
             out += String(arr[i])
@@ -56,7 +56,7 @@ func printArray(_ msg: String, _ arr: [Int]) {
             out += String(arr[i]) + ", "
         }
     }
-    out += "]"
+    out += "]."
     print(msg + out)
 }
 
@@ -100,20 +100,20 @@ print("arr1 cantidad: ", arr1.count)
 ===============ORDENAMIENTO==================
 =============================================
 INTERCAMBIO:
-entrada: [8, 4, 6, 2]
-salida: [2, 4, 6, 8]
+entrada: .[8, 4, 6, 2].
+salida: .[2, 4, 6, 8].
 SELECCIÓN:
-entrada: [40, 21, 1, 3, 14, 4]
-salida: [1, 3, 4, 14, 21, 40]
+entrada: .[40, 21, 1, 3, 14, 4].
+salida: .[1, 3, 4, 14, 21, 40].
 =============================================
 ================FUNCIONES====================
 =============================================
-arr1: [2, 4, 6, 8]
-arr1: [2, 4, 6, 8, 9]
-arr2: [1, 3, 4, 14, 21, 40]
-arr2: [1, 3, 4, 14, 21]
-arr2: [90, 3, 40, 10, 8, 5]
-arr2: [90, 3, 40, 8, 5]
+arr1: .[2, 4, 6, 8].
+arr1: .[2, 4, 6, 8, 9].
+arr2: .[1, 3, 4, 14, 21, 40].
+arr2: .[1, 3, 4, 14, 21].
+arr2: .[90, 3, 40, 10, 8, 5].
+arr2: .[90, 3, 40, 8, 5].
 arr1 vacío:  false
 arr1 cantidad:  5
 */

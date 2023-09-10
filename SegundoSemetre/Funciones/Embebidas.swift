@@ -30,6 +30,5 @@ valor true:  true
 valor false:  false
 valor nulo: nil
 103.5
-true
 valor cadena: true->3.504
 */

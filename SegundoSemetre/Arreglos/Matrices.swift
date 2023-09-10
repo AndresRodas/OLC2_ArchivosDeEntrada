@@ -1,5 +1,5 @@
 func printArrayStr(_ arr: [String]) {
-    var out = "["
+    var out = ".["
     for i in 0...4 {
         if i == (4) {
             out += arr[i]
@@ -7,12 +7,12 @@ func printArrayStr(_ arr: [String]) {
             out += arr[i] + ", "
         }
     }
-    out += "]"
+    out += "]."
     print(out)
 }
 
 func printArrayInt(_ arr: [Int]) {
-    var out = "["
+    var out = ".["
     for i in 0...4 {
         if i == 4 {
             out += String(arr[i])
@@ -20,12 +20,12 @@ func printArrayInt(_ arr: [Int]) {
             out += String(arr[i]) + ", "
         }
     }
-    out += "]"
+    out += "]."
     print(out)
 }
 
 func imprimirPunteo(_ ests: [String], _ cursos: [String], _ notas: [[[Int]]]) {
-    let ponderacion = ["1er parcial", "2do parcial", "3er parcial", "Lab", "Examen final"]
+    let ponderacion : [String] = ["1er parcial", "2do parcial", "3er parcial", "Lab", "Examen final"]
     printArrayStr(ponderacion)
     print("")
     for i in 0...3 {
@@ -65,8 +65,8 @@ func imprimirNotaFinal(_ ests: [String], _ cursos: [String], _ notas: [[[Int]]])
     }
 }
 
-let estudiantes = ["Lorenza", "Rosendo", "Fermina", "Markel"]
-let cursos = ["Arqui1", "Archivos", "Compi2"]
+let estudiantes : [String] = ["Lorenza", "Rosendo", "Fermina", "Markel"]
+let cursos : [String] = ["Arqui1", "Archivos", "Compi2"]
 
 let notasBuenas: [[Int]] = [
     [53, 88, 95, 89, 75],
@@ -89,39 +89,39 @@ imprimirNotaFinal(estudiantes, cursos, notas)
 /*
 Imprimir notas por curso y estudiantes
 
-[1er parcial, 2do parcial, 3er parcial, Lab, Examen final]
+.[1er parcial, 2do parcial, 3er parcial, Lab, Examen final].
 
 Estudiante:  Lorenza
 Curso:  Arqui1
-[37, 49, 61, 29, 44]
+.[37, 49, 61, 29, 44].
 Curso:  Archivos
-[56, 60, 51, 68, 70]
+.[56, 60, 51, 68, 70].
 Curso:  Compi2
-[47, 15, 39, 17, 74]
+.[47, 15, 39, 17, 74].
 
 Estudiante:  Rosendo
 Curso:  Arqui1
-[69, 74, 52, 34, 36]
+.[69, 74, 52, 34, 36].
 Curso:  Archivos
-[24, 44, 50, 18, 76]
+.[24, 44, 50, 18, 76].
 Curso:  Compi2
-[74, 60, 32, 63, 78]
+.[74, 60, 32, 63, 78].
 
 Estudiante:  Fermina
 Curso:  Arqui1
-[78, 14, 23, 52, 33]
+.[78, 14, 23, 52, 33].
 Curso:  Archivos
-[28, 79, 77, 55, 24]
+.[28, 79, 77, 55, 24].
 Curso:  Compi2
-[23, 79, 47, 62, 44]
+.[23, 79, 47, 62, 44].
 
 Estudiante:  Markel
 Curso:  Arqui1
-[73, 53, 11, 49, 52]
+.[73, 53, 11, 49, 52].
 Curso:  Archivos
-[29, 16, 65, 34, 12]
+.[29, 16, 65, 34, 12].
 Curso:  Compi2
-[72, 69, 30, 44, 37]
+.[72, 69, 30, 44, 37].
 
 
 Imprimir nota final por curso y estudiantes
