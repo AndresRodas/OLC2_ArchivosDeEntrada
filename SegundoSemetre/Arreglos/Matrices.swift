@@ -47,13 +47,13 @@ func imprimirNotaFinal(_ ests: [String], _ cursos: [String], _ notas: [[[Int]]])
                 var nota: Float = 0.0
                 if k == 4 {
                     let efinal: Float = 25.0 / 100.0
-                    nota = Float(notas[i][j][k]) * efinal
+                    nota = Float(String(notas[i][j][k])) * efinal
                 } else if k == 3 {
                     let lab: Float = 32.0 / 100.0
-                    nota = Float(notas[i][j][k]) * lab
+                    nota = Float(String(notas[i][j][k])) * lab
                 } else {
                     let parcial: Float = (43.0 / 3.0) / 100.0
-                    nota = Float(notas[i][j][k]) * parcial
+                    nota = Float(String(notas[i][j][k])) * parcial
                 }
                 notaFinal += nota
             }
