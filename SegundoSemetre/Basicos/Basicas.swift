@@ -1,5 +1,6 @@
 print("----------------------")
 print("----ARCHIVO BASICO----")
+print("--------16 pts--------")
 print("----------------------")
 
 var bol = false
@@ -27,46 +28,25 @@ var f = true
 var j: Float = 10.0
 var k: Float = 10.0
 
-print("")
-print("")
+print((a > b || b < c))
 
-if a > b || b < c {
-    print(">>>>>> Esto no debería de imprimirse")
-} else {
-    print(">>>>>> Esto debería de imprimirse")
-}
-
-if (a == b && j == k) || 14 != c {
-    print(">>>>>> Esto debería de imprimirse")
-} else {
-    print(">>>>>> Esto no debería de imprimirse")
-}
+print((a == b && j == k) || 14 != c)
 
 var val = 5
 var resp = 5
 var valorVerdadero = 100
 
-if (valorVerdadero == (50 + 50 + (val - val))) && (!(!true)) {
-    print(">>>>>> En este lugar debería de entrar :)")
-    valorVerdadero = 50
-} else if (f || (valorVerdadero > 50)) && ((resp != 100) && !(f)) {
-    print(">>>>>> Aca no debería de entrar :ccc")
-    valorVerdadero = 70
-} else {
-    print(">>>>>> Aca no debería de entrar :cccc")
-}
+print((valorVerdadero == (50 + 50 + (val - val))) && (!(!true)))
 
 var x1 = 15
+print(x1 % 2 == 0)
 
-if x1 % 2 == 0 {
-    print(">>>>> numeroPar ingreso a if verdadero,", x1, "es par")
-} else {
-    print(">>>>> numeroPar ingreso a if falso,", x1, "no es par")
-}
+print("valor nulo: ", nil)
 
 /*
 ----------------------
 ----ARCHIVO BASICO----
+--------16 pts--------
 ----------------------
 El valor de val1 es: 214
 El valor de val2 es: 412
@@ -76,10 +56,8 @@ El valor de bol es: false
 El valor de cad1 es: imprimir
 El valor de cad2 es: cadena valida
 El valor de bol2: true
-
-
->> Esto debería de imprimirse
->> Esto debería de imprimirse
->> En este lugar debería de entrar :)
->>> numeroPar ingreso a if falso, 15 no es par
+false
+true
+true
+false
 */

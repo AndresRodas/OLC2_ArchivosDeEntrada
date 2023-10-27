@@ -1,44 +1,53 @@
-// Función recursiva para calcular el factorial de un número
-func factorial(_ n: Int) -> Int {
-    if n < 2 {
+print("--------------------------");
+print("---FUNCIONES RECURSIVAS---");
+print("-----------7 pts----------");
+print("--------------------------");
+
+func fibonacci(_ n: Int) -> Int {
+    if n <= 0 {
+        return 0
+    } else if n == 1 {
         return 1
     } else {
-        return n * factorial(n - 1)
+        return fibonacci(n - 1) + fibonacci(n - 2)
     }
 }
 
-// Función recursiva para calcular la función de Ackermann
-func ackermann(_ m: Int, _ n: Int) -> Int {
-    if m == 0 {
-        return n + 1
-    } else if n == 0 {
-        return ackermann(m - 1, 1)
+func Hanoi(_ discos: Int, _ origen: Int, _ auxiliar: Int, _ destino: Int) {
+    if discos == 1 {
+        print("Mover disco de", origen, "a", destino)
     } else {
-        return ackermann(m - 1, ackermann(m, n - 1))
+        Hanoi(discos - 1, origen, destino, auxiliar)
+        print("Mover disco de", origen, "a", destino)
+        Hanoi(discos - 1, auxiliar, origen, destino)
     }
 }
 
-print("--------------------------")
-print("----ARCHIVO RECURSIVOS----")
-print("--------------------------")
-print("Factorial de 6: ", factorial(6))
-print("Factorial de 4: ", factorial(4))
-print("Factorial de 3: ", factorial(3))
 print("")
-print("Ackerman de 3,0: ", ackermann(3, 0))
-print("Ackerman de 2,8: ", ackermann(2, 8))
-print("Ackerman de 2,1: ", ackermann(2, 1))
+print("Factorial de 4: ", fibonacci(4))
+print("Factorial de 8: ", fibonacci(8))
+print("Factorial de 10: ", fibonacci(10))
+print("")
+print("Hanoi")
+Hanoi(3, 1, 2, 3)
 
 
 /*
 --------------------------
-----ARCHIVO RECURSIVOS----
+---FUNCIONES RECURSIVAS---
+-----------7 pts----------
 --------------------------
-Factorial de 6:  720
-Factorial de 4:  24
-Factorial de 3:  6
 
-Ackerman de 3,0:  5
-Ackerman de 2,8:  19
-Ackerman de 2,1:  5
+Factorial de 4:  3
+Factorial de 8:  21
+Factorial de 10:  55
+
+Hanoi
+Mover disco de 1 a 3
+Mover disco de 1 a 2
+Mover disco de 3 a 2
+Mover disco de 1 a 3
+Mover disco de 2 a 1
+Mover disco de 2 a 3
+Mover disco de 1 a 3
 */
