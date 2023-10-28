@@ -24,9 +24,9 @@ func Hanoi(_ discos: Int, _ origen: Int, _ auxiliar: Int, _ destino: Int) {
 }
 
 print("")
-print("Factorial de 4: ", fibonacci(4))
-print("Factorial de 8: ", fibonacci(8))
-print("Factorial de 10: ", fibonacci(10))
+print("Fibonacci de 4: ", fibonacci(4))
+print("Fibonacci de 8: ", fibonacci(8))
+print("Fibonacci de 10: ", fibonacci(10))
 print("")
 print("Hanoi")
 Hanoi(3, 1, 2, 3)
@@ -38,9 +38,9 @@ Hanoi(3, 1, 2, 3)
 -----------7 pts----------
 --------------------------
 
-Factorial de 4:  3
-Factorial de 8:  21
-Factorial de 10:  55
+Fibonacci de 4:  3
+Fibonacci de 8:  21
+Fibonacci de 10:  55
 
 Hanoi
 Mover disco de 1 a 3
