@@ -25,8 +25,8 @@ var a: number = 100;
 var b: number = 100;
 var c: number = 7;
 var f: boolean = true;
-var j: number = 10.0;
-var k: number = 10.0;
+var j: number = 10;
+var k: number = 10;
 
 console.log((a > b || b < c));
 
@@ -40,8 +40,6 @@ console.log((valorVerdadero == (50 + 50 + (val - val))) && (!(!true)));
 
 var x1: number = 15;
 console.log(x1 % 2 == 0);
-
-console.log("valor nulo: ", null);
 
 /*
 ----------------------
