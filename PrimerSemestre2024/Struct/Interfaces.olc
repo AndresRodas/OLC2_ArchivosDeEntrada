@@ -1,0 +1,111 @@
+console.log("--------------------------");
+console.log("--------INTERFACES--------");
+console.log("----------10 pts----------");
+console.log("--------------------------");
+
+console.log(" ");
+console.log("=============================================");
+console.log("================DEFINICIÓN===================");
+console.log("=============================================");
+
+interface StructArr {
+    datos: number;
+}
+
+interface CentroTuristico {
+    nombre: string;
+}
+
+interface Carro {
+    placa: string;
+    color: string;
+    tipo: string;
+}
+
+interface Personaje {
+    nombre: string;
+    edad: number;
+    descripcion: string;
+    carro: Carro;
+    numeros: StructArr;
+}
+
+console.log(" ");
+console.log("=============================================");
+console.log("================INSTANCIACIÓN=================");
+console.log("=============================================");
+
+const centro1: CentroTuristico = { nombre: "Volcan de pacaya" };
+const centro2: CentroTuristico = { nombre: "Rio dulce" };
+const centro3: CentroTuristico = { nombre: "Laguna Luchoa" };
+const centro4: CentroTuristico = { nombre: "Playa Blanca" };
+const centro5: CentroTuristico = { nombre: "Antigua Guatemala" };
+const centro6: CentroTuristico = { nombre: "Lago de Atitlan" };
+const newCarro: Carro = { placa: "090PLO", color: "gris", tipo: "mecanico" };
+const nums: StructArr = { datos: 0.0 };
+
+var p1: Personaje = {
+    nombre: "Jose",
+    edad: 18,
+    descripcion: "No hace nada",
+    carro: newCarro,
+    numeros: nums
+};
+
+const nums2: StructArr = { datos: parseFloat("23.43") };
+
+console.log(" ");
+console.log("=============================================");
+console.log("========ASIGNACIÓN Y ACCESO==================");
+console.log("=============================================");
+
+console.log("El nombre del Centro turistico 1 es: ", centro1.nombre);
+console.log("El nombre del Centro turistico 2 es: ", centro2.nombre);
+console.log("El nombre del Centro turistico 3 es: ", centro3.nombre);
+console.log("El nombre del Centro turistico 4 es: ", centro4.nombre);
+console.log("El nombre del Centro turistico 5 es: ", centro5.nombre);
+console.log("El nombre del Centro turistico 6 es: ", centro6.nombre);
+
+console.log("Persona nombre: ", p1.nombre, ", edad: ", p1.edad, ", carroTipo: ", p1.carro.tipo, ", numeros: ", p1.numeros.datos);
+p1.numeros = nums2;
+console.log("Persona nombre: ", p1.nombre, ", edad: ", p1.edad, ", carroTipo: ", p1.carro.tipo, ", nuevos numeros: ", p1.numeros.datos);
+
+console.log("");
+console.log("=============================================");
+console.log("=================FUNCIONES===================");
+console.log("=============================================");
+console.log("Llaves: ", Object.keys(newCarro));
+console.log("Valores: ", Object.values(newCarro));
+
+/*
+--------------------------
+--------INTERFACES--------
+----------10 pts----------
+--------------------------
+ 
+=============================================
+================DEFINICIÓN===================
+=============================================
+ 
+=============================================
+================INSTANCIACIÓN=================
+=============================================
+ 
+=============================================
+========ASIGNACIÓN Y ACCESO==================
+=============================================
+El nombre del Centro turistico 1 es:  Volcan de pacaya
+El nombre del Centro turistico 2 es:  Rio dulce
+El nombre del Centro turistico 3 es:  Laguna Luchoa
+El nombre del Centro turistico 4 es:  Playa Blanca
+El nombre del Centro turistico 5 es:  Antigua Guatemala
+El nombre del Centro turistico 6 es:  Lago de Atitlan
+Persona nombre:  Jose , edad:  18 , carroTipo:  mecanico , numeros:  0
+Persona nombre:  Jose , edad:  18 , carroTipo:  mecanico , nuevos numeros:  23.43
+
+=============================================
+=================FUNCIONES===================
+=============================================
+Llaves:  [ 'placa', 'color', 'tipo' ]
+Valores:  [ '090PLO', 'gris', 'mecanico' ]
+*/

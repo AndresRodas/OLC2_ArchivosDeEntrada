@@ -1,0 +1,109 @@
+console.log("--------------------------");
+console.log("---FUNCIONES EMBEBIDAS----");
+console.log("----------14 pts----------");
+console.log("--------------------------");
+
+console.log("");
+console.log("--------- FUNCIÓN SUMA");
+function suma(numero1: number, numero2: number): number {
+    const resultado: number = numero1 + numero2;
+    return resultado;
+}
+
+const resultado: number = suma(5, 3);
+console.log("La suma es: ", resultado);
+
+console.log("");
+console.log("--------- MULTIPLES LLAMADAS");
+function saludo3(){
+    console.log("saludos!");
+}
+
+function saludo2(){
+    console.log("mundo");
+    saludo3();
+}
+
+function saludo1(){
+    console.log("hola");
+    saludo2();
+}
+
+saludo1();
+
+console.log("");
+function ejemplo2(a: number, b: number){
+    console.log(a);
+    console.log(b);
+}
+
+const precio1: number = 66;
+const precio2: number = 77;
+ejemplo2(precio1, precio2);
+
+console.log("");
+function addValue(x: number[], y: number){
+    x.push(y);
+}
+
+var numeros: number[] = [1,2,3,4,5];
+console.log("numeros inicial: ", numeros);
+addValue(numeros, 6);
+console.log("numeros final: ", numeros);
+
+console.log("");
+const num3: number = parseFloat("9.5");
+const num4: number = parseFloat("3.6");
+const num1: number = parseInt("20");
+const num2: number = parseInt("20");
+var temp1: number = num1 + num2;
+var temp2: number = num3 - num4;
+const sumaStr: string = temp1.toString();
+const restaStr: string = temp2.toString();
+
+const flag : boolean = true;
+console.log("valor true: ", flag.toString());
+console.log("valor false: ", false.toString());
+console.log("valor 1: ", sumaStr);
+console.log("valor 2: ", restaStr);
+const letras: string = "hOlA MuNDo";
+const min: string = letras.toLowerCase();
+const may: string = letras.toUpperCase();
+console.log("valor minusculas: ", min);
+console.log("valor mayusculas: ", may);
+console.log("Tipos de datos:");
+console.log("---", typeof num1);
+console.log("---", typeof letras);
+console.log("---", typeof flag);
+
+/*
+--------------------------
+---FUNCIONES EMBEBIDAS----
+----------14 pts----------
+--------------------------
+
+--------- FUNCIÓN SUMA
+La suma es:  8
+
+--------- MULTIPLES LLAMADAS
+hola
+mundo
+saludos!
+
+66
+77
+
+numeros inicial:  [ 1, 2, 3, 4, 5 ]
+numeros final:  [ 1, 2, 3, 4, 5, 6 ]
+
+valor true:  true
+valor false:  false
+valor 1:  40
+valor 2:  5.9
+valor minusculas:  hola mundo
+valor mayusculas:  HOLA MUNDO
+Tipos de datos:
+--- number
+--- string
+--- boolean
+*/

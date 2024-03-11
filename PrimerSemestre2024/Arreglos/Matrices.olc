@@ -1,0 +1,104 @@
+console.log("--------------------------");
+console.log("---------MATRICES---------");
+console.log("----------14 pts----------");
+console.log("--------------------------");
+
+console.log("");
+console.log("Creación de Matriz!");
+const notas: number[][] = [
+    [53, 88, 95, 89, 75],
+    [81, 51, 57, 67, 93],
+    [94, 74, 58, 84, 100]
+];
+
+console.log("");
+console.log("Acceso:");
+console.log("Esta suma debería ser 100: ", notas[1][0] + 19);
+console.log("Esta suma debería ser 100: ", notas[0][4] + 25);
+console.log("Esta suma debería ser 100: ", notas[2][0] + 6);
+console.log("Esta suma debería ser 245: ", notas[0][1] + notas[1][2] + notas[2][4]);
+
+console.log("");
+const md: number[] = [1, 2, 3, 4, 5, 6];
+console.log("Matriz de una dimensión: ", md[0]);
+
+console.log("");
+const mdd: number[][] = [
+    [1, 2, 3, 4, 5, 6],
+    [1, 2, 3, 4, 5, 6],
+    [1, 2, 3, 4, 5, 6]
+];
+console.log("Matriz de dos dimensiones: ", mdd[0][1]);
+
+console.log("");
+const mddd: number[][][] = [
+    [
+        [1, 2, 3, 4, 5, 6],
+        [1, 2, 3, 4, 5, 6],
+        [1, 2, 3, 4, 5, 6]
+    ],
+    [
+        [1, 2, 3, 4, 5, 6],
+        [1, 2, 3, 4, 5, 6],
+        [1, 2, 3, 4, 5, 6]
+    ]
+];
+console.log("Matriz de tres dimensiones: ", mddd[0][1][2]);
+
+console.log("");
+var mdddd: number[][][][] = [
+    [
+        [
+            [1, 2],
+            [1, 2]
+        ],
+        [
+            [1, 2],
+            [1, 2]
+        ]
+    ],
+    [
+        [
+            [1, 2],
+            [1, 2]
+        ],
+        [
+            [1, 2],
+            [1, 2]
+        ]
+    ]
+];
+console.log("Matriz de N dimensiones: ", mdddd[0][1][1][1]);
+
+console.log("");
+console.log("Asignación:");
+console.log("Valor inicial: ", mdddd[1][1][1][1]);
+mdddd[1][1][1][1] = notas[0][4] + 25;
+console.log("Valor final: ", mdddd[1][1][1][1]);
+
+/*
+--------------------------
+---------MATRICES---------
+----------14 pts----------
+--------------------------
+
+Creación de Matriz!
+
+Acceso:
+Esta suma debería ser 100:  100
+Esta suma debería ser 100:  100
+Esta suma debería ser 100:  100
+Esta suma debería ser 245:  245
+
+Matriz de una dimensión:  1
+
+Matriz de dos dimensiones:  2
+
+Matriz de tres dimensiones:  3
+
+Matriz de N dimensiones:  2
+
+Asignación:
+Valor inicial:  2
+Valor final:  100
+*/

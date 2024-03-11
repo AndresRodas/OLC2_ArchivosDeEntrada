@@ -1,0 +1,104 @@
+console.log("--------------------------");
+console.log("---------ARREGLOS---------");
+console.log("----------12 pts----------");
+console.log("--------------------------");
+
+console.log("");
+console.log("=============================================");
+console.log("================CREACIÓN=====================");
+console.log("=============================================");
+var arr1: number[] = [8, 4, 6, 2];
+var arr2: number[] = [40, 21, 1, 3, 14, 4];
+var arr3: number[] = [90, 3, 40, 10, 8, 5];
+console.log("Se crean los arreglos arr1, arr2, arr3");
+console.log("arr1: ", arr1);
+console.log("arr2: ", arr2);
+console.log("arr3: ", arr3);
+
+console.log("");
+console.log("=============================================");
+console.log("=================ACCESO======================");
+console.log("=============================================");
+
+console.log("arr1: ", arr1[1]+4);
+console.log("arr2: ", 5+8*5-arr2[2]);
+console.log("arr3: ", arr3[4]*8);
+
+console.log("=============================================");
+console.log("================FUNCIONES====================");
+console.log("=============================================");
+
+console.log("============ PUSH");
+console.log("arr1: ", arr1);
+arr1.push(9);
+console.log("arr1: ", arr1);
+
+console.log("============ POP");
+console.log("arr2: ", arr2);
+console.log("pop arr2: ", arr2.pop());
+console.log("arr2: ", arr2);
+
+console.log("============ INDEXOF");
+console.log("Posición 3: ", arr3.indexOf(10));
+console.log("Posición -1: ", arr3.indexOf(666));
+
+console.log("============ JOIN");
+console.log("arr1: ", arr1.join());
+console.log("arr2: ", arr2.join());
+console.log("arr3: ", arr3.join());
+
+console.log("============ LENGTH");
+console.log("arr1: ", arr1, "length: ", arr1.length);
+console.log("arr2: ", arr2, "length: ", arr2.length);
+console.log("arr3: ", arr3, "length: ", arr3.length);
+console.log("Eliminando indices: ", arr1.pop(), arr2.pop(), arr3.pop());
+console.log("arr1: ", arr1, "length: ", arr1.length);
+console.log("arr2: ", arr2, "length: ", arr2.length);
+console.log("arr3: ", arr3, "length: ", arr3.length);
+
+/*
+--------------------------
+---------ARREGLOS---------
+----------12 pts----------
+--------------------------
+
+=============================================
+================CREACIÓN=====================
+=============================================
+Se crean los arreglos arr1, arr2, arr3
+arr1:  [ 8, 4, 6, 2 ]
+arr2:  [ 40, 21, 1, 3, 14, 4 ]
+arr3:  [ 90, 3, 40, 10, 8, 5 ]
+
+=============================================
+=================ACCESO======================
+=============================================
+arr1:  8
+arr2:  44
+arr3:  64
+=============================================
+================FUNCIONES====================
+=============================================
+============ PUSH
+arr1:  [ 8, 4, 6, 2 ]
+arr1:  [ 8, 4, 6, 2, 9 ]
+============ POP
+arr2:  [ 40, 21, 1, 3, 14, 4 ]
+pop arr2:  4
+arr2:  [ 40, 21, 1, 3, 14 ]
+============ INDEXOF
+Posición 3:  3
+Posición -1:  -1
+============ JOIN
+arr1:  8,4,6,2,9
+arr2:  40,21,1,3,14
+arr3:  90,3,40,10,8,5
+============ LENGTH
+arr1:  [ 8, 4, 6, 2, 9 ] length:  5
+arr2:  [ 40, 21, 1, 3, 14 ] length:  5
+arr3:  [ 90, 3, 40, 10, 8, 5 ] length:  6
+Eliminando indices:  9 14 5
+arr1:  [ 8, 4, 6, 2 ] length:  4
+arr2:  [ 40, 21, 1, 3 ] length:  4
+arr3:  [ 90, 3, 40, 10, 8 ] length:  5
+*/
