@@ -52,8 +52,8 @@ addValue(numeros, 6);
 console.log("numeros final: ", numeros);
 
 console.log("");
-const num3: number = parseFloat("9.5");
-const num4: number = parseFloat("3.6");
+const num3: float = parseFloat("9.5");
+const num4: float = parseFloat("3.6");
 const num1: number = parseInt("20");
 const num2: number = parseInt("20");
 var temp1: number = num1 + num2;

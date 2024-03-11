@@ -96,10 +96,10 @@ console.log("===================================================================
 a = -1;
 while (a < 5) {
     a = a + 1;
-    if (a === 3) {
+    if (a == 3) {
         console.log("a");
         continue;
-    } else if (a === 4) {
+    } else if (a == 4) {
         console.log("b");
         break;
     }
