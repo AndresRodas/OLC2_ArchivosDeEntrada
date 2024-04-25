@@ -1,0 +1,61 @@
+console.log("----------------------");
+console.log("----ARCHIVO BASICO----");
+console.log("--------21 pts--------");
+console.log("----------------------");
+
+var bol: boolean = false;
+var bol2: boolean = !bol;
+var cad1: string = "imprimir";
+var cad2: string = "cadena valida";
+
+var val1: number = 7 - (5 + 10 * (2 + 4 * (5 + 2 * 3)) - 8 * 3 * 3) + 50 * (6 * 2);
+var val2: number = (2 * 2 * 2 * 2) - 9 - (8 - 6 + (3 * 3 - 6 * 5 - 7 - (9 + 7 * 7 * 7) + 10) - 5) + 8 - (6 - 5 * (2 * 3));
+var val3: number = val1 + ((2 + val2 * 3) + 1 - ((2 * 2 * 2) - 2) * 2) - 2;
+
+console.log("El valor de val1 es:", val1);
+console.log("El valor de val2 es:", val2);
+console.log("El valor de val3 es:", val3);
+console.log("El resultado de la operación es:", val3);
+console.log("El valor de bol es:", bol);
+console.log("El valor de cad1 es:", cad1);
+console.log("El valor de cad2 es:", cad2);
+console.log("El valor de bol2:", bol2);
+
+var a: number = 100;
+var b: number = 100;
+var c: number = 7;
+var f: boolean = true;
+var j: number = 10;
+var k: number = 10;
+
+console.log((a > b || b < c));
+
+console.log((a == b && j == k) || 14 != c);
+
+var val: number = 5;
+var resp: number = 5;
+var valorVerdadero: number = 100;
+
+console.log((valorVerdadero == (50 + 50 + (val - val))) && (!(!true)));
+
+var x1: number = 15;
+console.log(x1 % 2 == 0);
+
+/*
+----------------------
+----ARCHIVO BASICO----
+--------21 pts--------
+----------------------
+El valor de val1 es: 214
+El valor de val2 es: 412
+El valor de val3 es: 1439
+El resultado de la operación es: 1439
+El valor de bol es: false
+El valor de cad1 es: imprimir
+El valor de cad2 es: cadena valida
+El valor de bol2: true
+false
+true
+true
+false
+*/

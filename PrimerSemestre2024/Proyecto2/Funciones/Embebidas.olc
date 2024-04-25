@@ -1,0 +1,100 @@
+console.log("--------------------------");
+console.log("---FUNCIONES EMBEBIDAS----");
+console.log("----------21 pts----------");
+console.log("--------------------------");
+
+console.log("");
+console.log("--------- FUNCIONES NO RECURSIVAS CON PARÁMETROS");
+function suma(numero1: number, numero2: number): number {
+    const resultado: number = numero1 + numero2;
+    return resultado;
+}
+
+const resultado: number = suma(5, 3);
+console.log("La suma es: ", resultado);
+
+console.log("");
+console.log("--------- FUNCIONES NO RECURSIVAS SIN PARÁMETROS");
+function saludo3(){
+    console.log("saludos!");
+}
+
+function saludo2(){
+    console.log("mundo");
+    saludo3();
+}
+
+function saludo1(){
+    console.log("hola");
+    saludo2();
+}
+
+saludo1();
+
+console.log("");
+console.log("--------- FUNCIÓN SIN RETORNO");
+function ejemplo2(a: number, b: number){
+    console.log(a);
+    console.log(b);
+}
+
+const precio1: number = 66;
+const precio2: number = 77;
+ejemplo2(precio1, precio2);
+
+console.log("");
+console.log("--------- FUNCIONES EMBEBIDAS");
+const num1: number = parseInt("20");
+const num2: number = parseInt("20");
+const num3: float = parseFloat("9.5");
+const num4: float = parseFloat("3.6");
+var temp1: float = num1 + num2;
+var temp2: float = num3 - num4;
+const sumaStr: string = temp1.toString();
+const restaStr: string = temp2.toString();
+
+const flag : boolean = true;
+console.log("valor true: ", flag.toString());
+console.log("valor false: ", false.toString());
+console.log("valor 1: ", sumaStr);
+console.log("valor 2: ", restaStr);
+const letras: string = "hOlA MuNDo";
+const min: string = letras.toLowerCase();
+const may: string = letras.toUpperCase();
+console.log("valor minusculas: ", min);
+console.log("valor mayusculas: ", may);
+console.log("Tipos de datos:");
+console.log("---", typeof num1);
+console.log("---", typeof letras);
+console.log("---", typeof flag);
+
+/*
+--------------------------
+---FUNCIONES EMBEBIDAS----
+----------21 pts----------
+--------------------------
+
+--------- FUNCIONES NO RECURSIVAS CON PARÁMETROS
+La suma es:  8
+
+--------- FUNCIONES NO RECURSIVAS SIN PARÁMETROS
+hola
+mundo
+saludos!
+
+--------- FUNCIÓN SIN RETORNO
+66
+77
+
+--------- FUNCIONES EMBEBIDAS
+valor true:  true
+valor false:  false
+valor 1:  40
+valor 2:  5.9
+valor minusculas:  hola mundo
+valor mayusculas:  HOLA MUNDO
+Tipos de datos:
+--- number
+--- string
+--- boolean
+*/

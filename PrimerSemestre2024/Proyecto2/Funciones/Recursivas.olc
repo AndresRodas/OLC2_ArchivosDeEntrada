@@ -1,0 +1,26 @@
+function factorial(n: number): number {
+    if (n === 0) {
+        return 1;
+    } else {
+        return n * factorial(n - 1);
+    }
+}
+
+console.log("--------------------------");
+console.log("---FUNCIONES RECURSIVAS---");
+console.log("----------4 pts----------");
+console.log("--------------------------");
+
+const numero = 5;
+console.log("El factorial de ", numero, " es: ");
+console.log(factorial(numero));
+
+
+/*
+--------------------------
+---FUNCIONES RECURSIVAS---
+----------4 pts----------
+--------------------------
+El factorial de  5  es: 
+120
+*/

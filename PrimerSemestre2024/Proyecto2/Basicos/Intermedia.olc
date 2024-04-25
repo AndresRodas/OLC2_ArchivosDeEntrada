@@ -1,0 +1,174 @@
+console.log("--------------------------");
+console.log("----ARCHIVO INTERMEDIO----");
+console.log("----------22 pts----------");
+console.log("--------------------------");
+
+console.log("");
+console.log("=======================================================================");
+console.log("=============================IFs ANIDADOS==============================");
+console.log("=======================================================================");
+var a: number = 909;
+var aux: number = 10;
+if (aux > 0) {
+    console.log("PRIMER IF CORRECTO");
+    if (true && (aux == 1)) {
+        console.log("SEGUNDO IF INCORRECTO");
+    } else if (aux > 10) {
+        console.log("SEGUNDO IF INCORRECTO");
+    } else {
+        console.log("SEGUNDO IF CORRECTO");
+    }
+} else if (aux <= 3) {
+    console.log("PRIMER IF INCORRECTO");
+    if (true && (aux == 1)) {
+        console.log("SEGUNDO IF INCORRECTO");
+    } else if (aux > 10) {
+        console.log("SEGUNDO IF INCORRECTO");
+    } else {
+        console.log("SEGUNDO IF CORRECTO");
+    }
+} else if (aux == a) {
+    console.log("PRIMER IF INCORRECTO");
+    if (true && (aux == 1)) {
+        console.log("SEGUNDO IF INCORRECTO");
+    } else if (aux > 10) {
+        console.log("SEGUNDO IF INCORRECTO");
+    } else {
+        console.log("SEGUNDO IF CORRECTO");
+    }
+}
+
+console.log("");
+console.log("=======================================================================");
+console.log("=================================WHILE=================================");
+console.log("=======================================================================");
+var index: number = 0;
+while (index <= 200) {
+    if (index == 0) {
+        index = index + 5;
+    } else if (index > 50) {
+        index = index * 2;
+    } else {
+        index = (index * 2) + 1;
+    }
+    console.log(index);
+}
+
+console.log("");
+console.log("=======================================================================");
+console.log("==================================FOR===================================");
+console.log("=======================================================================");
+const filas: number = 3;
+const columnas: number = 3;
+
+for (let i = 0; i < filas; i++) {
+    for (let j = 0; j < columnas; j++) {
+        console.log("Fila ", i);
+        console.log("Columna ", j);
+    }
+}
+
+console.log("");
+console.log("=======================================================================");
+console.log("================================SWITCH=================================");
+console.log("=======================================================================");
+const numero: number = 4;
+switch (numero) {
+    case 1:
+        console.log("Uno");
+        break;
+    case 2:
+        console.log("Dos");
+        break;
+    case 3:
+        console.log("Tres");
+        break;
+    case 4:
+        console.log("Cuatro");
+        break;
+    case 5:
+        console.log("Cinco");
+        break;
+    default:
+        console.log("Invalid day");
+        break;
+}
+
+console.log("");
+console.log("=======================================================================");
+console.log("=============================TRANSFERENCIA=============================");
+console.log("=======================================================================");
+a = -1;
+while (a < 5) {
+    a = a + 1;
+    if (a == 3) {
+        console.log("a");
+        continue;
+    } else if (a == 4) {
+        console.log("b");
+        break;
+    }
+    console.log("El valor de a es:", a);
+}
+console.log("Se debió imprimir");
+
+/*
+--------------------------
+----ARCHIVO INTERMEDIO----
+----------22 pts----------
+--------------------------
+
+=======================================================================
+=============================IFs ANIDADOS==============================
+=======================================================================
+PRIMER IF CORRECTO
+SEGUNDO IF CORRECTO
+
+=======================================================================
+=================================WHILE=================================
+=======================================================================
+5
+11
+23
+47
+95
+190
+380
+
+=======================================================================
+==================================FOR===================================
+=======================================================================
+Fila  0
+Columna  0
+Fila  0
+Columna  1
+Fila  0
+Columna  2
+Fila  1
+Columna  0
+Fila  1
+Columna  1
+Fila  1
+Columna  2
+Fila  2
+Columna  0
+Fila  2
+Columna  1
+Fila  2
+Columna  2
+
+=======================================================================
+================================SWITCH=================================
+=======================================================================
+Cuatro
+
+=======================================================================
+=============================TRANSFERENCIA=============================
+=======================================================================
+El valor de a es: 0
+El valor de a es: 1
+El valor de a es: 2
+a
+b
+Se debió imprimir
+*/
