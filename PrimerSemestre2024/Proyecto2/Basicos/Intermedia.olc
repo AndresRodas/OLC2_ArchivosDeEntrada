@@ -61,8 +61,8 @@ console.log("===================================================================
 const filas: number = 3;
 const columnas: number = 3;
 
-for (let i = 0; i < filas; i++) {
-    for (let j = 0; j < columnas; j++) {
+for (var i: number = 0; i < filas; i++) {
+    for (var j: number = 0; j < columnas; j++) {
         console.log("Fila ", i);
         console.log("Columna ", j);
     }
